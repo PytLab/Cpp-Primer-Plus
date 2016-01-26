@@ -1,4 +1,4 @@
-#include <iostream>
+	#include <iostream>
 
 struct Car{
     std::string producer;
@@ -11,6 +11,7 @@ int main(void)
     
     cout << "How many cars do you wish to catalog? ";
     int ncar;
+	i
     (cin >> ncar).get();
     
     Car * cars = new Car [ncar];
