@@ -14,11 +14,8 @@
 
 ![](https://github.com/PytLab/Cpp-Primer-Plus/blob/master/ch07/screenshots/7_3.gif)
 
-####7_4####
 
-![](https://github.com/PytLab/Cpp-Primer-Plus/blob/master/ch07/screenshots/7_4.gif)
-
-####7_7####
+####7_5####
 
 ![](https://github.com/PytLab/Cpp-Primer-Plus/blob/master/ch07/screenshots/7_5.gif)
 
