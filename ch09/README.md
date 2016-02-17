@@ -16,5 +16,5 @@
 
 ####9_4####
 
-![](https://github.com/PytLab/Cpp-Primer-Plus/blob/master/ch09/screenshots/9_5.gif)
+![](https://github.com/PytLab/Cpp-Primer-Plus/blob/master/ch09/screenshots/9_4.gif)
 
