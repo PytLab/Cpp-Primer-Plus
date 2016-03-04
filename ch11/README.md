@@ -1,4 +1,4 @@
-## Chapter 11 - 对象和类##
+## Chapter 11 - 使用类##
 
 ###screenshots:
 
