@@ -72,4 +72,5 @@ std::istream & operator>>(std::istream & is, Complex & c)
 std::ostream & operator<<(std::ostream & os, const Complex & c)
 {
     os << "(" << c.real << ", " << c.img << "i)";
+    return os;
 }
