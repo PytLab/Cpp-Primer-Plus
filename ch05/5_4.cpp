@@ -14,7 +14,7 @@ int main(void)
         cleo *= 1.05;
     }
     
-    cout << year << " years later, " << endl;
+    cout << year-1 << " years later, " << endl;
     cout << "Daphne has $" << daphne << endl;
     cout << "Cleo has $" << cleo << endl;
     
