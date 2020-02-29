@@ -9,8 +9,8 @@ struct stringy{
 };
 
 void set(stringy &, char *);
-void show(const stringy &, int n = 0);
-void show(const char *, int n = 0);
+void show(const stringy &, int n = 1);
+void show(const char *, int n = 1);
 
 int main(void)
 {
@@ -33,7 +33,7 @@ void set(stringy & beauy, char * str)
 {
     int len = strlen(str);
 
-    beauy.str = new char [len];
+    beauy.str = new char [len+1];
     strcpy(beauy.str, str);
 
     beauy.ct = len;
