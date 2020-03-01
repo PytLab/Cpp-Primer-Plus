@@ -29,7 +29,8 @@ int main(void)
     cout << "Max double: " << maxn(arr_flt, 4) << endl;
 
     show(arr_ch, 4);
-    cout << "Max string: " << maxn(arr_ch, 4) << endl;
+    char* max3=maxn(arr_ch, 4);
+    cout << "Max string: " << &max3 << endl;
 
     return 0;
 }
