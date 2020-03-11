@@ -8,7 +8,7 @@ namespace SALES
         // copy sales
         for(int i = 0; i < QUARTERS; ++i)
         {
-            if(i <= n)
+            if(i < n)
                 s.sales[i] = ar[i];
             else
                 s.sales[i] = 0.0;
@@ -17,7 +17,7 @@ namespace SALES
         // get average, max, min
         double sum = 0.0;
         double max = s.sales[0], min = s.sales[0];
-        for(int i = 0; i < QUARTERS; ++i)
+        for(int i = 0; i < n; ++i)
         {
             double cur = s.sales[i];
             if(cur > max)
@@ -26,7 +26,7 @@ namespace SALES
                 min = cur;
             sum += cur;
         }
-        s.average = sum/(float)QUARTERS;
+        s.average = sum/(float)n;
         s.max = max;
         s.min = min;
     }
