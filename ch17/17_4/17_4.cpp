@@ -1,40 +1,45 @@
-#include <fstream>
 #include <iostream>
-#include <cstdlib>
-#include <string>
+#include <fstream>
 
-int main()
-{
-    using namespace std;
+const char * file1 = "input1.txt";
+const char * file2 = "input2.txt";
+const char * file3 = "output1.txt";
 
-    ifstream fin1("in1.txt", ios_base::in);
-    ifstream fin2("in2.txt", ios_base::in);
-    if (!(fin1 && fin2))
-    {
-        cerr << "Failed to open in1.txt or in2.txt" << endl;
-        exit(EXIT_FAILURE);
-    }
+int main() {
+	using namespace std;
+	ifstream fin1(file1, ios_base::in);
+	ifstream fin2(file2, ios_base::in);
+	ofstream fout1(file3, ios_base::out);
+	if (!fin1.is_open() || !fin2.is_open())
+	{
+		cerr << "wrong input file!\n";
+		exit(EXIT_FAILURE);
+	}
+	char ch;
+	if (!fout1.is_open()) {
+		cerr << "Can't open this for output:\n";
+		exit(EXIT_FAILURE);
+	}
+	else {
+		while (!fin1.eof() || !fin2.eof()) {
+			if(!fin1.eof()) {
+				while (fin1.get(ch) && ch != '\n')
+					fout1 << ch;
+				fout1 << ' ';
+			}
+			if(!fin2.eof()) {
+				while (fin2.get(ch) && ch != '\n')
+					fout1 << ch;
+			}
+			fout1 << '\n';
+		}
+	}
+	fin1.close();
+	fin2.close();
+	fout1.close();
 
-    ofstream fout("out.txt", ios_base::out);
-    if (!fout)
-    {
-        cerr << "Failed to open out.txt" << endl;
-        exit(EXIT_FAILURE);
-    }
 
-    // merge
-    string word;
-    while (fin1 >> word)
-        fout << word << " ";
 
-    while (fin2 >> word)
-        fout << word << " ";
 
-    cout << "Copied content in in1.txt and in2.txt to out.txt" << endl;
-
-    fin1.close();
-    fin2.close();
-    fout.close();
-
-    return 0;
+	return 0;
 }
