@@ -26,7 +26,8 @@ int main(void)
     // convert weight
     double wt_kilogram = wt_pound/Pound_per_kilogram;
     
-    double BMI = wt_kilogram/ht_meter;
+    //double BMI = wt_kilogram/ht_meter;// the BMI is kg/(meter)^2
+    double BMI = wt_kilogram/(ht_meter*ht_meter);
     cout << "BMI: " << BMI << endl;
 
     return 0;
