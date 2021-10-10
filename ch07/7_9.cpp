@@ -52,7 +52,7 @@ int getinfo(student * pstu, int n)
         cout << "fullname: ";
         // detect blank line
         cin.getline(pt->fullname, Slen);
-        if(!pt->fullname)
+        if(!*pt->fullname)
             break;
         cout << "hobby: ";
         cin.getline(pt->hobby, Slen);
