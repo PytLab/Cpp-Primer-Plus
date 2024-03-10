@@ -40,12 +40,12 @@ int main()
             fout << steps << ": " << result << endl;
             steps++;
         }
-        cout << "After " << steps << " steps, the subject "
+        fout << "After " << steps << " steps, the subject "
             "has the following location:\n";
-        cout << result << endl;
+        fout << result << endl;
         result.polar_mode();
-        cout << " or\n" << result << endl;
-        cout << "Average outward distance per step = "
+        fout << " or\n" << result << endl;
+        fout << "Average outward distance per step = "
             << result.magval()/steps << endl;
         steps = 0;
         result.reset(0.0, 0.0);
